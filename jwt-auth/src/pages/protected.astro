@@ -33,35 +33,23 @@ import Layout from "../layouts/Layout.astro";
       </defs>
     </svg>
     <h1>
-      Welcome to the <span class="text-gradient">Astro JWT Middleware</span> example
+      <span class="text-gradient">This page is protected</span>
     </h1>
-
     <div class="instructions">
+      <h2>You're logged in!</h2>
       <p class="instructions">
-        Authentication is done via a <a
-          href="https://jwt.io/"
-          target="_blank"
-          rel="noreferrer noopener">JWT</a
-        > in your project.
+        This page cannot reach it unless you have the{" "}
+        <code>user token</code> JWT Cookie. Don't have the cookie? You will be redirected
+        to the{" "}
+        <a href="/">index page</a>.
 
         <br />
+        <br />
 
-        <button id="login">Login</button>
+        <span>Click the logout button to unset the JWT cookie</span>
+
+        <button id="logout">Logout</button>
       </p>
-
-      <p>
-        If you're not logged in i.e., without a valid token set, you wont be
-        able to vist the protected resources below:
-      </p>
-
-      <ul>
-        <li>
-          <a href="/api/protected">Protected API route</a>
-        </li>
-        <li>
-          <a href="/protected">Protected page</a>
-        </li>
-      </ul>
     </div>
   </main>
 </Layout>
@@ -130,21 +118,21 @@ import Layout from "../layouts/Layout.astro";
   a {
     color: white;
     opacity: 0.6;
-    text-decoration: underline;
+    background: black;
   }
 </style>
 
 <script>
-  const logoutButton = document.getElementById("login");
+  const logoutButton = document.getElementById("logout");
 
   if (logoutButton) {
     logoutButton.addEventListener("click", () => {
-      fetch("/api/login", { method: "POST" })
+      fetch("/api/logout", { method: "POST" })
         .then((res) => {
           if (!res.ok) {
             throw new Error("Not OK!");
           }
-          window.location.href = "/protected";
+          window.location.href = "/";
         })
         .catch((error) => {
           console.warn("Fetch call failed");

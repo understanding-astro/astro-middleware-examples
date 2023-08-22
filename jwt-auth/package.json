@@ -10,6 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.10.9"
+    "@astrojs/netlify": "^2.6.0",
+    "astro": "^2.10.9",
+    "jose": "^4.14.4",
+    "nanoid": "^4.0.2"
   }
 }
