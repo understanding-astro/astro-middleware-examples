@@ -1,10 +1,20 @@
-# Astro Basic auth Middleware
+# Astro Middleware Examples
 
-![Demo](https://i.imgur.com/sKm7KCW.png)
+![Demo](https://i.imgur.com/zwaEOJU.png)
+
+## Examples
+
+- Hello world
+- Locals object
+- Basic Auth
+- JWT Auth
+- Redirects
+- Multiple middleware
+- Coming soon ...
 
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+Change directory to the required example and run any of the following commands from a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |

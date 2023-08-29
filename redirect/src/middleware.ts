@@ -4,7 +4,7 @@ const INDEX_PATH = "/";
 
 export const onRequest = defineMiddleware((context, next) => {
   /**
-   * The middleware runs every time a page of endpoint is about to be rendered.
+   * The middleware runs every time a page or endpoint is about to be rendered.
    * Only redirect if this is the home page
    */
   if (context.url.pathname === INDEX_PATH) {
