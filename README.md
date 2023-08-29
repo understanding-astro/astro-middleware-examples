@@ -1,8 +1,6 @@
+![Demo](https://i.imgur.com/dKpBx5G.png)
+
 # Astro Middleware Examples
-
-![Demo](https://i.imgur.com/zwaEOJU.png)
-
-## Examples
 
 - Hello world
 - Locals object
