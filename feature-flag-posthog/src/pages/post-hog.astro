@@ -5,21 +5,24 @@ import Card from "../components/Card.astro";
 
 <Layout title="Welcome to Astro.">
   <main>
-    <h1>Welcome to <span class="text-gradient">Growth Book</span></h1>
+    <h1>Welcome to the <span class="text-gradient">PostHog AB test</span></h1>
     <p class="instructions">
-      If you're seeing this page, it means the feature flag is enabled!<br />
-      <strong>Code Challenge:</strong> Tweak the feature flag implementation in <code
-        >src/middleware.ts</code
-      >
+      If you're seeing this page, it means the feature flag is enabled and
+      you've been automatically redirected!<br />
+
+      <small>
+        <strong>Code Challenge:</strong> Tweak the feature flag implementation
+        in <code>src/middleware.ts</code>
+      </small>
     </p>
     <ul role="list" class="link-card-grid">
       <Card
-        href="https://docs.growthbook.io/"
+        href="https://posthog.com/docs"
         title="Introduction"
-        body="Learn how Growthbook works and explore the official API docs."
+        body="Learn how Posthog works and explore the official API docs."
       />
       <Card
-        href="https://docs.growthbook.io/features/basics"
+        href="https://posthog.com/docs/feature-flags"
         title="Feature flags"
         body="Supercharge your deployments with feature flags."
       />
